@@ -1,0 +1,118 @@
+/********************** style the main body-part****************/
+body{
+    text-align: center;
+    background-color: rgb(57, 59, 59);
+    height: auto;
+    
+}
+/***********button :hover***************/
+#button:hover{
+    background-color: darkturquoise;
+}
+/* ********************maintain the possition of the container********************** */
+#margin-div{
+    margin-top:4px;
+    margin-left: 10%;
+}
+/*********************************using DISPLAY:FLEX css************************/
+#margin-div{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(206, 226, 233);
+    width: 80%;
+    border:2px solid rgb(114, 110, 110);
+}
+/***main title*****/
+#title{
+  font-size: 50px;
+  /* background-image: -moz-repeating-radial-gradient(120,); */
+  background-image: radial-gradient(circle, rgb(252, 252, 252), rgb(129, 129, 112), rgb(28, 36, 28));
+
+}
+/**************Main div*******/
+#main-div{
+   /* background-color: rgb(114, 78, 7); */
+   background-image: radial-gradient(circle, rgb(247, 238, 238), rgb(190, 201, 200), rgb(163, 163, 163));
+  width: 70%;
+  height: 100%;
+  margin-left: 15%;
+  border-radius: 20px;
+  height: auto;
+  /* height: 1000px; */
+  /* min-height: 600px;
+  max-height: 1000px; */
+  /* line-height: 800px; */
+
+}
+/***************button styling *********************/
+.button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 20px;
+  }
+  /* ******************************description styling maintaining******************** */
+  .description {
+    background-color:rgb(255, 255, 255);
+    border: none;
+    color: rgb(8, 7, 7);
+    padding: 15px 130px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    
+  }
+  /* ************************************maintain the date styling here************************** */
+  .date {
+    background-color:white;
+    border: none;
+    color:grey;
+    padding: 15px 50px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    
+  }
+  /* ****************.cotegoery- section styling************************* */
+  .cotegoery {
+    background-color:white;
+    border: none;
+    color:grey;
+    padding: 5px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    
+  }
+  /*********remove list style*****/
+  ul{
+    list-style: none;
+  }
+  /**** delete button **/
+  #delete-btn-in-list{
+    color: red;
+    /* size: 20px; */
+    font-size: 40px;
+  }
+  p{
+    font-weight: bold;
+    font-size: 25px;
+    /* background-color: brown; */
+  }
+  /* option-container */
+  input{
+    border-radius: 20px;
+  }

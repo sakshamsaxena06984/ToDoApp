@@ -1,0 +1,90 @@
+<html>
+
+<head>
+    <title>
+        <%= title %>
+    </title>
+    <!-- ******************** this link for adding the font****************** -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+        <!-- here adding the CSS file -->
+    <link rel="stylesheet" href="/css/home.css">
+</head>
+
+<body>
+    
+   <!-- ********** craeting the div container , for mainting the record*********** -->
+    <div id="main-div" >
+        <!-- style="background-color: grey;width: 50%;height: 100%;;margin-left: 25%;" -->
+        <!-- below h1 tag , use for showing app TITTLE  -->
+        <h1 id="title"><i class="fas fa-tasks"></i> TODO App</h1>
+         
+        <!-- ************here ,creating the from *********** -->
+        <form action="/create-todolist" method="POST">
+            <div>
+                <!-- ************here , taking the input for text*********** -->
+                <div style="margin-right: 50%;">
+                    <label for="description">DESCRIPTION</label>
+                    <input class="description" type="text" name="description" placeholder="what do you want to do?"
+                        required>
+                </div>
+                <!-- *************here, taking the data************** -->
+                <div style="padding-left: 50%;">
+                    <label for="date">DUE DATE</label>
+                    <input class="date" type="date" name="date" value="dd/mm/yyyy" required>
+                </div>
+                <!-- <input type="text" name="cotegoery" placeholder="cotegoery" required> -->
+                <!-- *****************here ,taking the provided choice************* -->
+                <div style="margin-right: 50%;">
+                    <label for="cotegoery">COTEGORY</label>
+                    <select name="cotegoery" class="cotegoery">
+                        <!-- it is for Personal -->
+                        <option value="Personal">Personal</option>
+                         <!-- it is for office --> 
+                        <option value="Office">Office</option>
+                         <!-- it is for school -->
+                        <option value="School">School</option>
+                         <!-- it is for cleaning -->
+                        <option value="Cleaning">Cleaning</option>
+                    </select>
+                </div>
+
+                <div>
+                    <!-- **************here , creating the button********** -->
+                    <button class="button" type="submit" style="font-weight: bolder;">
+                        <i class="fas fa-plus"></i> Add Task</button>
+                </div>
+            </div>
+        </form>
+        <!-- /*************************this section is use for showing the result*******************/ -->
+        <ul>
+            <% for(let i of todo_list){%>
+                <li>
+                    <div id="margin-div" >
+                        <!-- style="background-color: lightblue;width: 70%;" -->
+                        <p >
+                            <%= i.description %>
+                        </p>
+                        <p >
+                            <%= i.date %>
+                        </p>
+                        <p >
+                            <%= i.cotegoery %>
+                        </p>
+                        <div class="delete-button" style="margin-top: 15px;">
+                            <a href="/delete-task/?id=<%= i._id %>">
+                                <i id="delete-btn-in-list" class="fas fa-calendar-times" ></i>
+                            </a>
+
+                        </div>
+                    </div>
+
+                </li>
+
+                <% }%>
+        </ul>
+    </div>
+</body>
+
+</html>
